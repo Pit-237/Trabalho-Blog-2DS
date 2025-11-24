@@ -4,8 +4,11 @@ body {
 }
 
 .navbar {
-    background: transparent!important;
-    border-bottom: 1px solid #162533;
+    background: transparent !important;
+    backdrop-filter: blur(50px);
+    box-shadow: black;
+    border-radius: 3px;
+    z-index: 2000;
 }
 
 .nav-link{
