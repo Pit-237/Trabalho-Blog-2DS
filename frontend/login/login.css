@@ -1,0 +1,78 @@
+
+
+body { 
+    background: linear-gradient(to right, rgba(5, 7, 14, 1) 0%, 12.893982231616974%, rgba(19, 28, 38, 1) 25.787964463233948%, 62.893982231616974%, rgba(2, 4, 9, 1) 100%);
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: transparent!important;
+    border-bottom: 1px solid #162533;
+}
+
+.nav-link{
+    color: white!important;
+    margin: 10px;
+}
+
+.robo{
+    width: 50%; 
+    height: 54%; 
+
+    
+}
+h1{
+    color: #82b6e6;
+    font-family: 'Science Gothic';
+    font-size: 50px;
+    margin: 20px;
+    
+}
+h2{
+    color: #4b6783;
+    font-size: 20px;
+    margin: 10px;
+}
+hr{
+    color: #82b6e6;
+    background-color: #82b6e6;
+    height: 2px;
+}
+.box{
+    border: #2a3e52, solid, 1px;
+    padding: 12px;
+    border-radius: 10px;
+}
+.pupil{
+    color: #658db4;
+    font-size: 30px;
+    font-family: Science Gothic;
+    margin-bottom: 10px;
+}
+.CadastroButton{
+    background-color: #3d8ad1;
+    border-radius: 20px;
+    border: solid 4px #2a3e52;
+    color: aliceblue;
+    font-family: 'Science Gothic';
+    width: 120px;
+    height: 55px;
+}
+.EntrarButton{
+    background-color: #54738f;
+    border-radius: 20px;
+    border: solid 4px #1d2c3b;
+    color: aliceblue;
+    font-family: 'Science Gothic';
+    width: 120px;
+    height: 55px;
+}
+.ours{
+    font-size: 30px;
+}
+.card{
+    background-color: #1a2b3b;
+    border-radius: 15px;
+    border: #162533 3px solid;
+    color: aliceblue;
+}
