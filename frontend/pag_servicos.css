@@ -7,10 +7,10 @@ body {
     gap: 0.7em;
     padding: 0.9em;
     border-radius: 1em;
-    border: 1px solid hsl(0, 0%, 100%, 0.3);
+    border: 1px solid hsl(0, 0%, 50%, 0.3);
     background: hsl(0, 0%, 80%, 0.2);
     backdrop-filter: blur(2px);
-    box-shadow: inset 0 0 8px 1px hsl(0, 0%, 100%, 0.2);
+    box-shadow: inset 0 0 8px 1px hsl(0, 0%, 70%, 0.2);
     display: grid;
     place-items: center;
     color: white;
@@ -30,7 +30,7 @@ b{
     place-items: center;
     margin: 3px;
 
-    border: 1px solid hsl(0, 0%, 100%, 0.3);
+    border: 1px solid hsl(0, 0%, 50%, 0.3);
     background: hsla(233, 78%, 35%, 0.2);
     backdrop-filter: blur(2px);
 }
@@ -44,4 +44,17 @@ b{
 
 .botao:hover {
     background: hsla(233, 75%, 34%, 0.682);
+    transform: translateY(-3px);
+}
+
+
+
+.custom-width {
+    width: 100%;
+}
+
+@media(min-width: 1200px) {
+    .custom-width {
+        width: 75%;
+    }       
 }

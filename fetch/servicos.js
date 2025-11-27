@@ -1,7 +1,7 @@
 // Listar os Serviços
 
 //selecionando a div onde a lista sera exibida
-let lista = document.getElementById('lista');
+let lista = document.getElementById('servico');
 let servico = {};
 
 function getServicos() {
@@ -15,25 +15,44 @@ function getServicos() {
             }
         }
     )
+
         .then(response => response.json())
         .then(response => {
 
-            response.funcionarios.forEach(fun => {
+            console.log(response);
+            response.servicos.forEach(serv => {
                 // montando o visual da lista
-                let row = document.createElement('div');
-                row.classList.add('row');
-                row.setAttribute('id', fun.CodFun);
-                row.setAttribute('onclick', 'alert("Funcionario ' + fun.Nome + ' selecionado de id ' + fun.CodFun + '")');
-
                 let col = document.createElement('div');
-                col.classList.add('col-12');
+                col.classList.add('col-sm-12', 'col-md-6', 'col-xl-3')
 
-                let p = document.createElement('p');
-                p.innerText = fun.CodFun + ' - ' + fun.Nome;
+                let card = document.createElement('div');
+                card.classList.add('cards', 'my-3', 'w-75');
 
-                col.appendChild(p);
-                row.appendChild(col);
-                lista.appendChild(row);
+                let bola = document.createElement('div');
+                bola.classList.add('bola');
+                bola.innerText = "$";
+
+                let nome = document.createElement('h5');
+                nome.innerText = serv.nome;
+
+                let descricao = document.createElement('p');
+                descricao.innerText = serv.descricao;
+
+                let preco = document.createElement('h3');
+                preco.innerHTML = "<b>R$</b> " + serv.preco;
+
+                let botao = document.createElement('button');
+                botao.classList.add('botao', 'w-100', 'btn');
+                botao.innerText = 'Contatar Serviço';
+
+                lista.appendChild(col);
+
+                col.appendChild(card);
+                card.appendChild(bola);
+                card.appendChild(nome);
+                card.appendChild(descricao);
+                card.appendChild(preco);
+                card.appendChild(botao);
             });
 
         })
