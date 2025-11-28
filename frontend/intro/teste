@@ -49,7 +49,7 @@
     <hr>
 
     <div class="row d-flex justify-content-center">
-        <div class="col-xl-8 col-10 box transparent">
+        <div class="col-xl-8 col-10 box" id="transparent">
             <h1>Sobre nossa empresa</h1>
             <h2>Bem-vindo ao I.R.I.S. - Inovação, Redes, Inteligência e Soluções
 
@@ -60,7 +60,7 @@
                 Nosso site de blog noticiário, I.R.I.S. Notícias, é o destino perfeito para profissionais, estudantes e
                 entusiastas da tecnologia que buscam se manter informados sobre os últimos desenvolvimentos em áreas
                 como inteligência artificial, segurança cibernética, inovação, redes e muito mais.
-                <p>
+                <p></p>
 
 
                 Fique Conectado
@@ -94,7 +94,7 @@
 
         <div class="row">
             <div class="col d-flex justify-content-center">
-                <div class="box col-xl-8 transparent">
+                <div class="box col-xl-8" id="transparent">
                     
                         <h1 class="ours">Nossa Missão</h1>
 
@@ -110,7 +110,7 @@
                                 trabalham
                                 incansavelmente para trazer as últimas notícias, análises e opiniões sobre as
                                 tecnologias mais
-                                relevantes do mercado.</h2>
+                                relevantes do mercado.
 
                                 <h1 class="ours">Nossos Conteúdos</h1>
 
@@ -130,7 +130,5 @@
                 integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
                 crossorigin="anonymous"></script>
 </body>
-
-<footer></footer>
 
 </html>
