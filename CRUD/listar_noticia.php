@@ -4,23 +4,23 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-	$sql = "SELECT * FROM Funcionarios";
+	$sql = "SELECT * FROM noticias";
 
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {
-        $funcionarios = [];
+        $noticias = [];
         while ($row = $result->fetch_assoc()) {
-            array_push($funcionarios, $row);
+            array_push($noticias, $row);
         }
 
         $response = [
-            'funcionarios' => $funcionarios
+            'noticias' => $noticias
         ];
 
     } else {
         $response = [
-            'funcionarios' => 'Nenhum registro encontrado!'
+            'noticias' => 'Nenhum registro encontrado!'
         ];
     }
 

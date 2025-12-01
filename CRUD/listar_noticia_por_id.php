@@ -10,26 +10,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $requestData = json_decode($data);
     
     // Agora você pode acessar os dados usando $requestData
-    $codigo = $requestData->CodFun;
+    $codigo = $requestData->id;
 
 
-	$sql = "SELECT * FROM Funcionarios WHERE CodFun = '$codigo'";
+	$sql = "SELECT * FROM noticias WHERE id = '$codigo'";
 
     $result = $connection->query($sql);
 
     if ($result->num_rows > 0) {
-        $funcionarios = [];
+        $noticias = [];
         while ($row = $result->fetch_assoc()) {
-            array_push($funcionarios, $row);
+            array_push($noticias, $row);
         }
 
         $response = [
-            'funcionarios' => $funcionarios
+            'noticias' => $noticias
         ];
 
     } else {
         $response = [
-            'funcionarios' => 'Nenhum registro encontrado!'
+            'noticias' => 'Nenhum registro encontrado!'
         ];
     }
 

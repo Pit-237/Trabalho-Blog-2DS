@@ -8,19 +8,16 @@
   </head>
   <body>
 
-    <div class="container" id="lista"></div>
+    <div class="container" id="noticias"></div>
 
     <script>
         //selecionando a div onde a lista sera exibida
-        let lista = document.getElementById('lista');
-        
-        let funcionario = { };
+        let lista = document.getElementById('noticias');
 
-
-        function getFuncionarios(){
+        function getNoticias(){
                 isLoading = true;
 
-            fetch('http://localhost/Trabalho-Blog-2DS/CRUD/listar_funcionarios.php',
+            fetch('http://localhost/Trabalho-Blog-2DS/CRUD/listar_noticia.php',
                 {
                     method: 'GET',
                     headers: {
@@ -31,19 +28,27 @@
             .then(response => response.json())
             .then(response => {
                 
-                response.funcionarios.forEach(fun => {
+                response.noticias.forEach(news => {
                     // montando o visual da lista
                     let row = document.createElement('div');
                     row.classList.add('row');
-                    row.setAttribute('id', fun.CodFun);
-                    row.setAttribute('onclick', 'alert("Funcionario ' + fun.Nome + ' selecionado de id ' + fun.CodFun + '")');
+                    row.style.display = 'flex';
+                    row.style.justifyContent = 'space-between';
+                    row.style.alignItems = 'center';
+                    row.setAttribute('onclick', 'alert("Funcionario ' + fun.Nome + ' selecionado de id ' + fun.id + '")');
 
                     let col = document.createElement('div');
-                    col.classList.add('col-12');
+                    col.classList.add('col-12', 'col-sm-6', 'col-lg-4', 'mb-4');
+                    col.style.display = 'flex';
+                    col.style.justifyContent = 'center';
 
-                    let p = document.createElement('p');
-                    p.innerText = fun.CodFun + ' - ' + fun.Nome;
+                    let card = document.createElement('card');
+                    card.style.backgroundColor = 'red';
 
+                    
+
+
+                    
                     col.appendChild(p);
                     row.appendChild(col);
                     lista.appendChild(row);
@@ -58,7 +63,7 @@
             })
         }
 
-        getFuncionarios(); // Buscar Dados
+        getNoticias(); // Buscar Dados
     </script>
     
     
