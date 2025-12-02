@@ -1,0 +1,127 @@
+body {
+    background: linear-gradient(to right,
+        rgba(5, 7, 14, 1) 0%, 12.893982231616974%,
+        rgba(19, 28, 38, 1) 25.787964463233948%, 62.893982231616974%,
+        rgba(2, 4, 9, 1) 100%);
+    overflow-x: hidden;
+    color: #F5F5F5;
+}
+
+.navbar {
+    background: transparent !important;
+    backdrop-filter: blur(2px);
+    border-bottom: 1px solid hsl(0, 0%, 100%, 0.3);
+    box-shadow: black;
+    z-index: 2000;
+}
+
+.nav-link {
+    color: white !important;
+    margin: 10px;
+}
+
+.cards {
+    gap: 0.7em;
+    padding: 0.9em;
+    border-radius: 1em;
+    border: 1px solid hsl(0, 0%, 50%, 0.3);
+    background: hsl(0, 0%, 80%, 0.2);
+    backdrop-filter: blur(2px);
+    box-shadow: inset 0 0 8px 1px hsl(0, 0%, 70%, 0.2);
+    display: grid;
+    place-items: center;
+    color: #F5F5F5;
+}
+
+b {
+    color: #0d6efd;
+}
+
+.excluir {
+    align-self: end;
+    color: #F5F5F5;
+}
+
+.bola {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: grid;
+    place-self: center;
+    place-items: center;
+    margin: 3px;
+
+    border: 1px solid hsl(0, 0%, 50%, 0.3);
+    background: hsla(233, 78%, 35%, 0.2);
+    backdrop-filter: blur(2px);
+}
+
+.botao {
+    border: 1px solid hsl(0, 0%, 100%, 0.3);
+    background: #0d6efd;
+    backdrop-filter: blur(2px);
+    box-shadow: inset 0 0 8px 1px hsl(0, 0%, 100%, 0.2);
+    color: #F5F5F5;
+}
+
+.botao:hover {
+    background: #0b5ed7;
+    transform: translateY(-3px);
+}
+
+.custom-width {
+    width: 100%;
+}
+
+@media(min-width: 1200px) {
+    .custom-width {
+        width: 80%;
+    }
+}
+
+.filter {
+    background-color: dimgrey;
+    border: 1px solid hsl(0, 0%, 100%, 0.3);
+    border-radius: 1em;
+    box-shadow: inset 0 0 8px 1px hsl(0, 0%, 100%, 0.2);
+    padding: 7px;
+}
+
+.filter:hover {
+    background-color: hsla(233, 40%, 56%, 0.679);
+    color: white;
+}
+
+legend {
+    font-size: 45px;
+}
+
+textarea {
+    height: 80px;
+}
+
+.form-control {
+    background: hsla(246, 71%, 8%, 0.2);
+    border: 1px solid hsl(0, 0%, 100%, 0.3);
+    color: white;
+    height: 50px;
+}
+
+.form-control:focus {
+    background-color: hsla(246, 71%, 8%, 0.2) !important;
+    color: white;
+    box-shadow: none !important;
+    /* tira o brilho azul */
+    border: 1px solid white !important;
+}
+
+.rodape {
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(5, 7, 14, 1) 40%,
+            rgba(2, 4, 9, 1) 100%);
+    width: 100%;
+    margin-top: 100px;
+    border-top: 1px solid hsl(0, 0%, 100%, 0.3);
+}

@@ -1,6 +1,28 @@
+//Cadastrar Serviços
+document.getElementById('formServicos').addEventListener('submit', function (form) {
+    form.preventDefault();
+
+    // 1. Obtém os dados do formulário como FormData
+    let formData = new FormData(this); // <-- Use o FormData diretamente
+
+    // 2. Envia os dados
+    fetch('http://localhost/Trabalho-Blog-2DS/CRUD/listar_servico.php', {
+        method: 'POST',
+        // NÃO inclua o cabeçalho 'Content-Type: application/json'
+        // O navegador irá definir automaticamente o Content-Type correto para FormData.
+        body: formData // <-- Envia o objeto FormData
+    })
+        .then()
+        .then()
+        .catch(error => {
+            console.error('Erro na requisição:', error);
+            alert('Ocorreu um erro na comunicação com o servidor: ' + error.message);
+        });
+    window.location.reload();
+});
+
 // Listar os Serviços
 
-//selecionando a div onde a lista sera exibida
 let lista = document.getElementById('servico');
 let servico = {};
 
@@ -20,13 +42,36 @@ function getServicos() {
         .then(response => {
 
             console.log(response);
+
             response.servicos.forEach(serv => {
-                // montando o visual da lista
                 let col = document.createElement('div');
-                col.classList.add('col-sm-12', 'col-md-6', 'col-xl-3')
+                col.classList.add('col-sm-12', 'col-md-6', 'col-xl-3', 'd-flex', 'justify-content-center')
 
                 let card = document.createElement('div');
-                card.classList.add('cards', 'my-3', 'w-75');
+                card.classList.add('cards', 'my-3', 'custom-width');
+
+                let excluir = document.createElement('div');
+                excluir.classList.add('excluir');
+                excluir.innerText = "X";
+                excluir.dataset.id = serv.id;
+                excluir.addEventListener('click', () => {
+                    let id = excluir.dataset.id;
+
+                    let servico_excluido = { id: id };
+
+                    fetch("http://localhost/Trabalho-Blog-2DS/CRUD/remover_servico_por_id.php", {
+                        method: "DELETE",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(servico_excluido)
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                        });
+                        window.location.reload();
+                });
 
                 let bola = document.createElement('div');
                 bola.classList.add('bola');
@@ -48,6 +93,7 @@ function getServicos() {
                 lista.appendChild(col);
 
                 col.appendChild(card);
+                card.appendChild(excluir);
                 card.appendChild(bola);
                 card.appendChild(nome);
                 card.appendChild(descricao);
@@ -63,5 +109,4 @@ function getServicos() {
             isLoading = false;
         })
 }
-
-getServicos(); // Buscar Dados
+getServicos();

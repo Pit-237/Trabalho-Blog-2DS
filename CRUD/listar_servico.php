@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO servicos (nome, preco, descricao) VALUES (?, ?, ?)";
     $stmt = $connection->prepare($sql);
-    $stmt->bind_param("sd", $nome, $preco, $descricao);
+    $stmt->bind_param("sds", $nome, $preco, $descricao);
 
     if ($stmt->execute()) {
         echo json_encode(["sucesso" => "Serviço inserido com sucesso!"]);
