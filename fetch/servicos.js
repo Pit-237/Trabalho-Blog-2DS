@@ -2,15 +2,11 @@
 document.getElementById('formServicos').addEventListener('submit', function (form) {
     form.preventDefault();
 
-    // 1. Obtém os dados do formulário como FormData
-    let formData = new FormData(this); // <-- Use o FormData diretamente
+    let formData = new FormData(this);
 
-    // 2. Envia os dados
     fetch('http://localhost/Trabalho-Blog-2DS/CRUD/listar_servico.php', {
         method: 'POST',
-        // NÃO inclua o cabeçalho 'Content-Type: application/json'
-        // O navegador irá definir automaticamente o Content-Type correto para FormData.
-        body: formData // <-- Envia o objeto FormData
+        body: formData 
     })
         .then()
         .then()

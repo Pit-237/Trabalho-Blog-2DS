@@ -34,9 +34,9 @@
 
     <!-- Postagem Atualização -->
     <div class="container-fluid">
-        <div class="row d-flex justify-content-center">
+        <div class="row d-flex justify-content-center" id="posts">
 
-            <div class="col-8 my-4">
+            <!-- <div class="col-sm-12 col-lg-8 my-4">
                 <div class="cards card">
                     <img src="https://tldv.io/wp-content/uploads/2025/01/Gemini-Alternatives.jpg" class="card-img-top"
                         alt="...">
@@ -45,16 +45,23 @@
                             <p class="col-6 d-flex justify-content-start">01/12/2025</p>
                             <p class="col-6 d-flex justify-content-end">01:41</p>
                         </div>
+                        <p class="category">Categoria</p>
                         <p class="card-text">O Gemini é um modelo de inteligência artificial de grande porte
                             desenvolvido pela Google. Ele foi treinado para processar, entender e gerar linguagem
                             humana, auxiliando os usuários em tarefas como responder perguntas, resumir textos e criar
-                            conteúdo escrito de forma coesa. Ele opera como um programa, sem consciência.
+                            conteúdo escrito de forma coesa. Ele opera como um programa, sem consciência. &U+F341
                         </p>
+
+                        <div class="d-flex justify-content-end">
+                            <p>👁️</p>
+                            <p class="m-1">1</p>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <div class="col-4 my-4">
+            <div class="col-sm-12 col-lg-4 my-4">
                 <div class="cards card">
                     <img src="https://tldv.io/wp-content/uploads/2025/01/Gemini-Alternatives.jpg" class="card-img-top"
                         alt="...">
@@ -63,33 +70,22 @@
                             <p class="col-6 d-flex justify-content-start">01/12/2025</p>
                             <p class="col-6 d-flex justify-content-end">01:41</p>
                         </div>
+                        <p class="category">Categoria</p>
                         <p class="card-text">O Gemini é um modelo de inteligência artificial de grande porte
                             desenvolvido pela Google. Ele foi treinado para processar, entender e gerar linguagem
                             humana, auxiliando os usuários em tarefas como responder perguntas, resumir textos e criar
-                            conteúdo escrito de forma coesa. Ele opera como um programa, sem consciência.
+                            conteúdo escrito de forma coesa. Ele opera como um programa, sem consciência. &U+F341
                         </p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-4 my-4">
-                <div class="cards card">
-                    <img src="https://tldv.io/wp-content/uploads/2025/01/Gemini-Alternatives.jpg" class="card-img-top"
-                        alt="...">
-                    <div class="card-body">
-                        <div class="row">
-                            <p class="col-6 d-flex justify-content-start">01/12/2025</p>
-                            <p class="col-6 d-flex justify-content-end">01:41</p>
+
+                        <div class="d-flex justify-content-end">
+                            <p>👁️</p>
+                            <p class="m-1">1</p>
                         </div>
-                        <p class="card-text">O Gemini é um modelo de inteligência artificial de grande porte
-                            desenvolvido pela Google. Ele foi treinado para processar, entender e gerar linguagem
-                            humana, auxiliando os usuários em tarefas como responder perguntas, resumir textos e criar
-                            conteúdo escrito de forma coesa. Ele opera como um programa, sem consciência.
-                        </p>
+
                     </div>
                 </div>
-            </div>
-            
+            </div> -->
+
         </div>
     </div>
 
@@ -100,8 +96,8 @@
 
                 <legend>Adicionar nova Atualização</legend>
                 <p>Preencha os campos abaixo para adicionar uma nova atualização ao blog.</p>
-                <form id="formServicos" action="http://localhost/Trabalho-Blog-2DS/CRUD/listar_servico.php"
-                    method="post">
+                <form id="formPosts"
+                    action="http://localhost/Trabalho-Blog-2DS/CRUD/atualizacoes/cadastrar_atualizacao.php" method="post">
 
                     <div class="row">
                         <div class="mb-3 col-6 col-md-4">
@@ -110,8 +106,8 @@
                         </div>
 
                         <div class="mb-3 col-6 col-md-4">
-                            <label for="hora" class="label-control">Hora</label>
-                            <input type="time" name="hora" id="hora" class="form-control">
+                            <label for="horario" class="label-control">Hora</label>
+                            <input type="time" name="horario" id="horario" class="form-control">
                         </div>
 
                         <div class="mb-3 col-sm-12 col-md-4">
@@ -132,8 +128,8 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="descricao" style="color: white;">Conteúdo</label>
-                        <textarea class="form-control" id="descricao" name="descricao" type="text"
+                        <label for="conteudo" style="color: white;">Conteúdo</label>
+                        <textarea class="form-control" id="conteudo" name="conteudo" type="text"
                             style="height: 100px"></textarea>
                     </div>
 
