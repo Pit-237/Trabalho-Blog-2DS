@@ -20,6 +20,20 @@ body {
     margin: 10px;
 }
 
+.excluir {
+    position: absolute; /* ESSENCIAL - Tira do fluxo normal */
+    top: 5px;           /* Distância do topo */
+    right: 5px;         /* Distância da direita */
+    color: red;         /* Cor do "X" */
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;        /* Garante que fique acima de outros elementos */
+    padding: 5px 10px;  /* Para ser mais fácil de clicar */
+    background-color: white; /* Opcional: fundo para destaque */
+    border-radius: 3px;
+    border: 1px solid red;
+}
+
 b {
     color: #0d6efd;
 }

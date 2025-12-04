@@ -4,7 +4,7 @@ document.getElementById('formServicos').addEventListener('submit', function (for
 
     let formData = new FormData(this);
 
-    fetch('http://localhost/Trabalho-Blog-2DS/CRUD/listar_servico.php', {
+    fetch('http://localhost/Trabalho-Blog-2DS/CRUD/servicos/listar_servico.php', {
         method: 'POST',
         body: formData 
     })
@@ -25,7 +25,7 @@ let servico = {};
 function getServicos() {
     isLoading = true;
 
-    fetch('http://localhost/Trabalho-Blog-2DS/CRUD/listar_servico.php',
+    fetch('http://localhost/Trabalho-Blog-2DS/CRUD/servicos/listar_servico.php',
         {
             method: 'GET',
             headers: {
@@ -55,7 +55,7 @@ function getServicos() {
 
                     let servico_excluido = { id: id };
 
-                    fetch("http://localhost/Trabalho-Blog-2DS/CRUD/remover_servico_por_id.php", {
+                    fetch("http://localhost/Trabalho-Blog-2DS/CRUD/servicos/remover_servico_por_id.php", {
                         method: "DELETE",
                         headers: {
                             "Content-Type": "application/json"

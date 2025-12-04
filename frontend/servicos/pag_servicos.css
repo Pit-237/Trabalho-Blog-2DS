@@ -39,13 +39,22 @@ body {
     color: #F5F5F5;
 }
 
-b {
-    color: #0d6efd;
+.excluir {
+    position: absolute; 
+    top: 5px;           
+    right: 5px;         
+    color: red;        
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;        
+    padding: 5px 10px;  
+    background-color: white; 
+    border-radius: 3px;
+    border: 1px solid red;
 }
 
-.excluir {
-    align-self: end;
-    color: #F5F5F5;
+b {
+    color: #0d6efd;
 }
 
 .bola {

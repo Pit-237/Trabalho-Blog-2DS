@@ -1,6 +1,6 @@
 <?php
-include 'cors.php';
-include 'conexao.php';
+include '../cors.php';
+include '../conexao.php';
 
 // LISTAR (GET)
 if ($_SERVER["REQUEST_METHOD"] == "GET") {

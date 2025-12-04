@@ -53,6 +53,29 @@ function getPosts() {
                     col.classList.add('col-sm-12', 'col-lg-4', 'my-4');
                 }
 
+                let excluir = document.createElement('div');
+                excluir.classList.add('excluir');
+                excluir.innerText = "X";
+                excluir.dataset.id = resp.id;
+                excluir.addEventListener('click', () => {
+                    let id = excluir.dataset.id;
+
+                    let servico_excluido = { id: id };
+
+                    fetch("http://localhost/Trabalho-Blog-2DS/CRUD/atualizacoes/remover_atualizacao_por_id.php", {
+                        method: "DELETE",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(servico_excluido)
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data);
+                        });
+                        window.location.reload();
+                });
+
                 let card = document.createElement('div');
                 card.classList.add('cards', 'card');
 
@@ -103,6 +126,7 @@ function getPosts() {
                 card_body.appendChild(categoria);
                 card_body.appendChild(conteudo);
                 card_body.appendChild(visu);
+                card.appendChild(excluir);
                 visu.appendChild(olho);
                 visu.appendChild(num_visualizacao);
             });

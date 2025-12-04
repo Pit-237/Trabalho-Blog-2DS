@@ -1,6 +1,6 @@
 <?php
-	include 'cors.php';
-	include 'conexao.php';
+	include '../cors.php';
+	include '../conexao.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtém o corpo da solicitação POST

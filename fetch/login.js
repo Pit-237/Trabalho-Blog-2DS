@@ -1,6 +1,6 @@
 // FAZER LOGIN
 document.getElementById("formLogin").addEventListener("submit", function(e) {
-    e.preventDefault(); // impede envio tradicional
+    e.preventDefault(); 
 
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
@@ -8,14 +8,13 @@ document.getElementById("formLogin").addEventListener("submit", function(e) {
     fetch("http://localhost/Trabalho-Blog-2DS/CRUD/login/login_conta.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        credentials: "include", // importante para sessões
+        credentials: "include", 
         body: JSON.stringify({ email, senha })
     })
     .then(res => res.json())
     .then(resposta => {
         if (resposta.status === "ok") {
             console.log("Resposta do PHP:", resposta);
-            // login certo → redireciona
             window.location.href = "http://localhost/Trabalho-Blog-2DS/frontend/Front_End.HTML";
         } else {
             alert(resposta.msg || "Email ou senha incorretos!");

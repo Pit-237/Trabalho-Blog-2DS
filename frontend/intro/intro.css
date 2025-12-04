@@ -5,12 +5,15 @@ body {
 }
 
 .navbar {
-    background: transparent!important;
-    border-bottom: 1px solid #162533;
+    background-color: transparent !important;
+    backdrop-filter: blur(2px);
+    border-bottom: 1px solid hsl(0, 0%, 100%, 0.3);
+    box-shadow: black;
+    z-index: 2000;
 }
 
-.nav-link{
-    color: white!important;
+.nav-link {
+    color: white !important;
     margin: 10px;
 }
 
@@ -95,11 +98,17 @@ hr{
 
 .transparent{
     background-color: rgb(42,62,82, 0.4) ;
-    
-
-   
-    
 }
 .transparent h1, #transparent h2 {
     opacity : unset; /* Remove estilos apenas para h1, h2 e p */
+}
+
+.rodape {
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(5, 7, 14, 1) 40%,
+            rgba(2, 4, 9, 1) 100%);
+    width: 100%;
+    margin-top: 100px;
+    border-top: 1px solid hsl(0, 0%, 100%, 0.3);
 }
