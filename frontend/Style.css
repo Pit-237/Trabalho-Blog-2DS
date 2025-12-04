@@ -1,12 +1,20 @@
 body { 
-    background: linear-gradient(to right, rgba(5, 7, 14, 1) 0%, 12.893982231616974%, rgba(19, 28, 38, 1) 25.787964463233948%, 62.893982231616974%, rgba(2, 4, 9, 1) 100%);
+    background: linear-gradient(to right, rgba(5, 7, 14, 1) 0%, 12.893982231616974%, rgb(28, 40, 54) 25.787964463233948%, 62.893982231616974%, rgba(2, 4, 9, 1) 100%);
     overflow-x: hidden;
     animation: trocarCor 3s infinite;
 }
 
 .navbar {
+    <<<<<<< noticia
+    background: transparent !important;
+    backdrop-filter: blur(50px);
+    box-shadow: black;
+    border-radius: 3px;
+    z-index: 2000;
+=======
     background: linear-gradient(to right, rgba(5, 7, 14, 1) 0%, 12.893982231616974%, rgba(19, 28, 38, 1) 25.787964463233948%, 62.893982231616974%, rgba(2, 4, 9, 1) 100%)!important;
     border-bottom: 1px solid #162533;
+>>>>>>> main
 }
 
 .nav-link{
