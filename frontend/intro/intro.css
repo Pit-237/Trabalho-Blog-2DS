@@ -25,6 +25,11 @@ body {
     box-shadow: 0 0 10px #0ff;
 }
 
+.links {
+    color: white !important;
+    margin: 10px;
+}
+
 .logoText{
     width:190px ;
     margin: 5px;
