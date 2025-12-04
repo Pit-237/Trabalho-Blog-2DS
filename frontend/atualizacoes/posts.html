@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="posts.css">
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bd-navbar sticky-top">
+        <div class="container-fluid">
+            <div class="logo d-flex justify-content-center mx-3">
+                <h5><b>I</b>.R.<b>I</b>.S</h5>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="../../frontend/atualizacoes/posts.html">Atualizações</a>
+                    <a class="nav-link" href="#">Noticias</a>
+                    <a class="nav-link" href="../../frontend/servicos/pag_servicos.html">Serviços</a>
+                    <a class="nav-link" href="#">Sobre nós</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Postagem Atualização -->
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center" id="posts">
+
+            <!-- <div class="col-sm-12 col-lg-8 my-4">
+                <div class="cards card">
+                    <img src="https://tldv.io/wp-content/uploads/2025/01/Gemini-Alternatives.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <div class="row">
+                            <p class="col-6 d-flex justify-content-start">01/12/2025</p>
+                            <p class="col-6 d-flex justify-content-end">01:41</p>
+                        </div>
+                        <p class="category">Categoria</p>
+                        <p class="card-text">O Gemini é um modelo de inteligência artificial de grande porte
+                            desenvolvido pela Google. Ele foi treinado para processar, entender e gerar linguagem
+                            humana, auxiliando os usuários em tarefas como responder perguntas, resumir textos e criar
+                            conteúdo escrito de forma coesa. Ele opera como um programa, sem consciência. &U+F341
+                        </p>
+
+                        <div class="d-flex justify-content-end">
+                            <p>👁️</p>
+                            <p class="m-1">1</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-4 my-4">
+                <div class="cards card">
+                    <img src="https://tldv.io/wp-content/uploads/2025/01/Gemini-Alternatives.jpg" class="card-img-top"
+                        alt="...">
+                    <div class="card-body">
+                        <div class="row">
+                            <p class="col-6 d-flex justify-content-start">01/12/2025</p>
+                            <p class="col-6 d-flex justify-content-end">01:41</p>
+                        </div>
+                        <p class="category">Categoria</p>
+                        <p class="card-text">O Gemini é um modelo de inteligência artificial de grande porte
+                            desenvolvido pela Google. Ele foi treinado para processar, entender e gerar linguagem
+                            humana, auxiliando os usuários em tarefas como responder perguntas, resumir textos e criar
+                            conteúdo escrito de forma coesa. Ele opera como um programa, sem consciência. &U+F341
+                        </p>
+
+                        <div class="d-flex justify-content-end">
+                            <p>👁️</p>
+                            <p class="m-1">1</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </div>
+
+    <!-- Forms -->
+    <div class="container-fluid my-4">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+
+                <legend>Adicionar nova Atualização</legend>
+                <p>Preencha os campos abaixo para adicionar uma nova atualização ao blog.</p>
+                <form id="formPosts"
+                    action="http://localhost/Trabalho-Blog-2DS/CRUD/atualizacoes/cadastrar_atualizacao.php" method="post">
+
+                    <div class="row">
+                        <div class="mb-3 col-6 col-md-4">
+                            <label for="data" class="label-control">Data</label>
+                            <input type="date" name="data" id="data" class="form-control">
+                        </div>
+
+                        <div class="mb-3 col-6 col-md-4">
+                            <label for="horario" class="label-control">Hora</label>
+                            <input type="time" name="horario" id="horario" class="form-control">
+                        </div>
+
+                        <div class="mb-3 col-sm-12 col-md-4">
+                            <label for="categoria" class="label-control">Categoria</label>
+                            <select class="form-select" name="categoria" id="categoria">
+                                <option selected>Escolha uma Categoria</option>
+                                <option value="1">Blog</option>
+                                <option value="2">Noticias</option>
+                                <option value="3">Empresa</option>
+                                <option value="3">Assuntos Gerais</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="imagem" class="label-control">link da Imagem</label>
+                        <input type="text" name="imagem" id="imagem" class="form-control">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="conteudo" style="color: white;">Conteúdo</label>
+                        <textarea class="form-control" id="conteudo" name="conteudo" type="text"
+                            style="height: 100px"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-100 btn btn-primary">Cadastrar</button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid rodape">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+            <p class="col-md-4 mb-0 text-body-primary">© 2025 IRIS, Inc</p>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="../../frontend/atualizacoes/posts.html"
+                        class="nav-link px-2 text-body-secondary">Atualizações</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Noticias</a></li>
+                <li class="nav-item"><a href="../../frontend/servicos/pag_servicos.html"
+                        class="nav-link px-2 text-body-secondary">Serviços</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Sobre Nós</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="../../fetch/posts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
