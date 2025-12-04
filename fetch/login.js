@@ -1,59 +1,28 @@
-// CADASTRAR NOVO USUARIO
-document.getElementById('cadastrar_user').addEventListener('submit', function (form) {
-    form.preventDefault();
-
-    let formData = new formData(this);
-
-    fetch("http://localhost/Trabalho-Blog-2DS/CRUD/login/cadastrar_conta.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: formData
-        .then(res => res.json())
-        .then(data => {
-
-            if (data.status === "ok" || data.sucesso) {
-                window.location.href = "l../frontend/login/login.html";
-            } else {
-                alert("Erro no cadastro!");
-            }
-
-        })
-    });
-});
-
 // FAZER LOGIN
-let formLogin = document.getElementById("formLogin");
+document.getElementById("formLogin").addEventListener("submit", function(e) {
+    e.preventDefault(); // impede envio tradicional
 
-formLogin.addEventListener("submit", function(form) {
-    form.preventDefault(); 
-
-    // Pega os valores do form
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
 
-    // Cria objeto para enviar
-    const dados = { email, senha };
-
-    // Faz o fetch
-    fetch("login.php", {
+    fetch("http://localhost/Trabalho-Blog-2DS/CRUD/login/login_conta.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        credentials: "include", // envia a sessão
-        body: JSON.stringify(dados)
+        credentials: "include", // importante para sessões
+        body: JSON.stringify({ email, senha })
     })
     .then(res => res.json())
     .then(resposta => {
         if (resposta.status === "ok") {
-            // Login correto → redireciona
-            window.location.href = "pagina_protegida.html";
+            console.log("Resposta do PHP:", resposta);
+            // login certo → redireciona
+            window.location.href = "http://localhost/Trabalho-Blog-2DS/frontend/Front_End.HTML";
         } else {
-            // Login errado → mostra mensagem
-            alert(resposta.msg || "Erro no login!");
+            alert(resposta.msg || "Email ou senha incorretos!");
         }
     })
     .catch(err => {
-        console.error("Erro no fetch:", err);
+        console.error(err);
+        alert("Erro ao conectar com o servidor!");
     });
 });

@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssss", $nome, $email, $senha, $tipo);
 
     if ($stmt->execute()) {
-        echo json_encode(["sucesso" => "Usuário inserido com sucesso!"]);
+        header("Location: ../../frontend/login/login.html");
     } else {
         echo json_encode(["erro" => "Falha ao inserir"]);
     }
