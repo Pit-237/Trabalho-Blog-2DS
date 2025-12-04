@@ -13,8 +13,16 @@ background: linear-gradient(to right, rgba(5, 7, 14, 1) 0%, 12.893982231616974%,
 }
 
 .nav-link {
+    display: inline-block;
     color: white !important;
     margin: 10px;
+    border: 2px solid #82b6e6;
+    background: transparent;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-family: sans-serif;
+    box-shadow: 0 0 10px #0ff;
 }
 
 .logoText{
