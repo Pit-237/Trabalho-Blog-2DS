@@ -13,6 +13,19 @@ body {
 }
 
 .nav-link {
+    display: inline-block;
+    color: white !important;
+    margin: 10px;
+    border: 2px solid #82b6e6;
+    background: transparent;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-family: sans-serif;
+    box-shadow: 0 0 10px #0ff;
+}
+
+.links {
     color: white !important;
     margin: 10px;
 }
