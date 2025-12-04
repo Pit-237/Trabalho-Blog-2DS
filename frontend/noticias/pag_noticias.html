@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Noticias</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="pag_noticias.css">
+    <link rel="shortcut icon" href="../../imagens/Favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bd-navbar sticky-top">
+        <div class="container-fluid">
+            <div class="logo d-flex justify-content-center mx-3">
+                <h5><b>I</b>.R.<b>I</b>.S</h5>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="../../frontend/atualizacoes/posts.html">Atualizações</a>
+                    <a class="nav-link" href="../../frontend/noticias/noticias.html">Notícias</a>
+                    <a class="nav-link" href="../../frontend/servicos/pag_servicos.html">Serviços</a>
+                    <a class="nav-link" href="#">Sobre nós</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container noticia-container">
+
+        <span id="categoria" class="categoria-tag">Categoria</span>
+
+        <h1 id="titulo" class="titulo-noticia">Carregando...</h1>
+
+        <div class="autor-box">
+            <img src="../img/user.png" class="autor-foto">
+            <span id="autor" class="autor-nome">Autor</span>
+            <span id="data" class="autor-data">00/00/0000</span>
+        </div>
+
+        <img id="imagem" class="imagem-capa" src="" alt="Imagem da Notícia">
+
+        <p id="conteudo" class="conteudo"></p>
+
+    </div>
+
+    <script>
+        let params = new URLSearchParams(window.location.search);
+        let id = params.get("id");
+
+        fetch("http://localhost/Trabalho-Blog-2DS/CRUD/listar_noticia_por_id.php", {
+            method: "POST",
+            body: new URLSearchParams({ id })
+        })
+            .then(r => r.json())
+            .then(n => {
+                document.getElementById("categoria").innerText = n.categoria;
+                document.getElementById("titulo").innerText = n.titulo;
+                document.getElementById("autor").innerText = n.autor;
+                document.getElementById("data").innerText = n.data;
+                document.getElementById("imagem").src = n.imagem;
+                document.getElementById("conteudo").innerHTML = n.conteudo;
+            })
+            .catch(err => console.log(err));
+    </script>
+
+
+    <div class="container-fluid rodape">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3">
+            <p class="col-md-4 mb-0 text-body-primary">© 2025 IRIS, Inc</p>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="../../frontend/atualizacoes/posts.html"
+                        class="nav-link px-2 text-body-secondary">Atualizações</a></li>
+                <li class="nav-item"><a href="../../frontend/noticias/noticias.html"
+                        class="nav-link px-2 text-body-secondary">Notícias</a></li>
+                <li class="nav-item"><a href="../../frontend/servicos/pag_servicos.html"
+                        class="nav-link px-2 text-body-secondary">Serviços</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Sobre Nós</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script src="../../fetch/noticias.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
