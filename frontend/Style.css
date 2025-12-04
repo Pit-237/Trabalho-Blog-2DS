@@ -1,14 +1,11 @@
 body { 
-    background: linear-gradient(to right, rgba(5, 7, 14, 1) 0%, 12.893982231616974%, rgba(19, 28, 38, 1) 25.787964463233948%, 62.893982231616974%, rgba(2, 4, 9, 1) 100%);
+    background: linear-gradient(to right, rgba(5, 7, 14, 1) 0%, 12.893982231616974%, rgb(28, 40, 54) 25.787964463233948%, 62.893982231616974%, rgba(2, 4, 9, 1) 100%);
     overflow-x: hidden;
+    animation: trocarCor 3s infinite;
 }
 
 .navbar {
-    background: transparent !important;
-    backdrop-filter: blur(50px);
-    box-shadow: black;
-    border-radius: 3px;
-    z-index: 2000;
+
 }
 
 .nav-link{
@@ -16,10 +13,36 @@ body {
     margin: 10px;
 }
 
+.logo{
+    border-radius: 35px;
+    height: 50px;
+    width: 50px;
+}
+
+.us{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7%;
+    padding:0 13%;
+}
+
+.blog{
+    width: 45%;
+    color: white;
+}
+
 .robo{
-    margin-top: 5%;
-    margin-left: 65%;
-    width: 50%; 
-    height: 54%; 
-    
+    width: 45%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news{
+    display: flex;
+    justify-content: center;
+    margin-top: 11%;
+    background-color: #162533;
+    color: white;
 }
