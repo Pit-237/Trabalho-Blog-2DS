@@ -8,8 +8,8 @@ body {
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 1);
-    backdrop-filter: saturate(180%) blur(2px);
+       background: transparent !important;
+    backdrop-filter: blur(2px);
     border-bottom: 1px solid hsl(0, 0%, 100%, 0.3);
     box-shadow: black;
     z-index: 2000;
